@@ -1,0 +1,21 @@
+1.STUDENT VALIDATION:
+NAME VALIDATION: NOT (REGEX (Name,"[a-z A-Z]+[a-z A-Z]+"))
+USN VALIDATION: NOT(REGEX(USN__c,"[1-5]{1} +[A-Z]{2} + [0-9]{2} +[A-Z]{2} + [0-9]{3}"))
+SEMESTER VALIDATION:  OR (Semester__c >8, Semester__c <=0)
+CGPA VALIDATION: CGPA__c > 10
+3.FACULTY
+FACULTY NAME:  NOT (REGEX (Name,"[a-z] [A-Z] + [ a-z] [A-Z] +"))
+4.
+DATE&TIME VALIDATION:  Departure_Timing__c<NOW ()
+SOURCE AND DESTINATION: Source__c = Destination__c
+5. DEPARTMENT EVENT
+DATE AND TIME:  Event_Time__c <NOW ()
+6. BLOOD DONATION
+AGE: age__c < 18
+WEIGHT: weight__c < 50
+9.ART DATABASE
+ARTIST ID: NOT(BEGINS(ID__c,’ART’))
+10. RECORD
+STAFF_ID:  NOT(BEGINS(ID__c,’STAFF’))
+SUBJECT CODE:NOT (REGEX (Subject_Code__c, “[0-9]{2} +[a-z] [A-Z]{2} + [0-9]{2}+”))
+CREDITS: OR (credits__c >4, Credits__c <=0)
